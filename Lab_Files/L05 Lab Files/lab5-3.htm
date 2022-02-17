@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>Lab 5-3</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab 5-3</title>
 
-<script type="text/javascript">
-<!--
-
-
-/************************************************
+    <script type="text/javascript">
+      /************************************************
   The checkGrade() function checks a numerical
   value and returns a corresponding letter grade.
 ************************************************/
 
-function checkGrade(form) {
-  var myGrade = form.myselect.options[form.myselect.selectedIndex].text; 
-  if(myGrade >= 91) {
-    alert("Your grade is an A.");
-  }
-  else if(myGrade >= 81 && myGrade <= 90) { 
-    alert("Your grade is a B.");
-  }
-  else {
-    alert("Your grade is a C or lower.");
-  }
-}
- 
- 
+      function checkGrade(form) {
+        var myGrade = form.myselect.options[form.myselect.selectedIndex].text;
+        if (myGrade >= 91) {
+          alert("Your grade is an A.");
+        } else if (myGrade >= 81 && myGrade <= 90) {
+          alert("Your grade is a B.");
+        } else {
+          alert("Your grade is a C or lower.");
+        }
+      }
+    </script>
+  </head>
 
-//-->
-</script>
-
-</head>
-
-<body>
-
-<h3>CIW JavaScript Specialist</h3>
-<hr />
-<form name="myForm">
-Select numerical grade value:
-<select name="myselect">
-
-<script type="text/javascript">
-<!--
-
-/*********************************************************************
+  <body>
+    <h3>CIW JavaScript Specialist</h3>
+    <hr />
+    <form name="myForm">
+      Select numerical grade value:
+      <select name="myselect">
+        <script type="text/javascript">
+          var i = 100;
+          for (i = 100; i >= 0; i--) document.write(`<option>${i}</option>`);
+          /*********************************************************************
   Create a for statement. Inside the for definition, create a variable 
   named i for the loop counter variable. Assign an initial value 
   of 100 to i. The loop will continue as long as i is greater than or 
@@ -55,14 +43,15 @@ Select numerical grade value:
   use a document.write() statement to output an <option> tag and the 
   value of the loop counter variable i.
   *******************************************************************/
-//-->
-</script>
-
-</select>
-<p>
-<input type="button" value="Check Grade" onclick="checkGrade(this.form);" />
-</p>
-</form>
-
-</body>
+        </script>
+      </select>
+      <p>
+        <input
+          type="button"
+          value="Check Grade"
+          onclick="checkGrade(this.form);"
+        />
+      </p>
+    </form>
+  </body>
 </html>
