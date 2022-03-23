@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>Lab 8-2</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab 8-2</title>
 
-<script type="text/javascript">
-<!--
-    
-// create a class here
+    <script type="text/javascript">
+      // create a class here
+      class device {
+        constructor(name, brand) {
+          this.name = name;
 
+          this.brand = brand;
+        }
 
-//-->
-</script>
-</head>
-<body onload="dev1.display()">
-<h3>CIW JavaScript Specialist</h3>
-<hr />
+        display() {
+          document.write(
+            "The name of the device is " +
+              this.name +
+              " and its brand is " +
+              this.brand +
+              "."
+          );
+        }
+      }
 
-</body>
+      var fncn = new device("Vostro", "Dell");
+
+      fncn.display();
+
+      //-->
+    </script>
+  </head>
+  <body onload="dev1.display()">
+    <h3>CIW JavaScript Specialist</h3>
+    <hr />
+  </body>
 </html>
